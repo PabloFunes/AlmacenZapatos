@@ -1,0 +1,81 @@
+﻿@model AlmacenZapatos.Inventario
+
+<div class="panel panel-default">
+    <div class="panel panel-heading">
+        <h2 class="panel-title">@Model.Nombre</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.Id)
+                </td>
+                
+                <td>
+                    @Html.DisplayNameFor(model => model.Descripcion)
+                </td>
+                
+                <td>
+                    @Html.DisplayNameFor(model => model.Lote)
+                </td>
+                
+                <td>
+                    @Html.DisplayNameFor(model => model.Merma)
+                </td>
+                
+                <td>
+                    @Html.DisplayNameFor(model => model.Modelo)
+                </td>
+                
+                <td>
+                    @Html.DisplayNameFor(model => model.Precio)
+                </td>
+                
+                <td>
+                    @Html.DisplayName("Inventario Real")
+                </td>
+               
+                <td>
+                    @Html.DisplayName("Fecha De Entrada")
+                </td>
+                
+                <td>
+                    @Html.DisplayNameFor(model => model.Proveedor)
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <h3 class="panel-title">@Model.Id</h3>
+                </td>
+                <td>
+                    <h3 class="panel-title">@Model.Descripcion</h3>
+                </td>
+                <td>
+                    <h3 class="panel-title">@Model.Lote</h3>
+                </td>
+                <td>
+                    <h3 class="panel-title">@Model.Merma</h3>
+                </td>
+                <td>
+                    <h3 class="panel-title">@Model.Modelo</h3>
+                </td>
+                <td>
+                    <h3 class="panel-title">@Model.Precio</h3>
+                </td>
+                <td>
+                    <h3 class="panel-title">@Model.Inventario_Real</h3>
+                </td>
+                <td>
+                    <h3 class="panel-title">@Model.Fecha_Entrada</h3>
+                </td>
+                <td>
+                    <h3 class="panel-title">@Model.Proveedor</h3>
+                </td>
+            </tr>
+        </table>
+            @Html.ActionLink("Editar", "Actualizar", new { id = Model.Id }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id = Model.Id })             
+    </div>
+</div>
+

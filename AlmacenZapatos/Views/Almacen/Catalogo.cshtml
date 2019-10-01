@@ -1,0 +1,111 @@
+﻿@model IEnumerable<AlmacenZapatos.Inventario>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Catalogo</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    @Html.Partial("_Header")
+    <div class="col-lg-offset-5 col-lg-4 col-sm-offset-5 col-sm-4 col-md-offset-5 col-md-4"  >
+        <a class="btn btn-success" href="~/Almacen/NuevoZapato">Registrar Nuevo Lote</a>
+    </div>
+    <br />
+    <br />
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayName("Fecha De Entrada")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Merma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proveedor)
+            </th>
+            <th>
+                @Html.DisplayName("Inventario Real")
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Entrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Merma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proveedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inventario_Real)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Actualizar", new { id=item.Id }) |
+                @Html.ActionLink("Detalles", "Detalles", new { id=item.Id }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    </table>
+
+
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_Catalogo", item)
+    }
+
+
+
+
+</body>
+</html>

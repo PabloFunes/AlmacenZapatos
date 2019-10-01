@@ -1,0 +1,29 @@
+﻿body {
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #bbb;
+}
+
+/*Esta propiedad sirve para configurar el header
+    , se acomode al margen y sea responsiva
+*/
+.navbar {
+    margin-bottom: 0px;
+    padding: 30px 15px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/*Propiedad para rellenar la página con imagenes*/
+.fill-screen {
+    background-size: cover;
+    background-position: center;
+}
+
+/*Esta propiedad tambien funciona para ajustar la imagen
+    de fondo que se pondra
+*/
+.fixed-attachment {
+    background-attachment: fixed;
+}

@@ -1,0 +1,91 @@
+﻿@model AlmacenZapatos.Inventario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Eliminar.css" rel="stylesheet" />
+    <title>Eliminar</title>
+</head>
+<body>
+    @Html.Partial("_Header")
+    <div style="text-align:center">
+        <h1>¿Estas seguro de eliminarlo?</h1>
+    </div>
+
+    <table class="table table-bordered">
+        <tr style="grid-row-align:center ">
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th style="grid-column-align:center">
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayName("Fecha De Entrada")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Merma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proveedor)
+            </th>
+            <th>
+                @Html.DisplayName("Inventario Real")
+            </th>
+        </tr>
+
+            <tr class="text-center">
+                <td>
+                    @Html.DisplayFor(model => model.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Fecha_Entrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Lote)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Stock)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Merma)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Proveedor)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Inventario_Real)
+                </td>
+            </tr>
+    </table>  
+</body>
+</html>

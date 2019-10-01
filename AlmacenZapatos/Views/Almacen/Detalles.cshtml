@@ -1,0 +1,106 @@
+﻿@model AlmacenZapatos.Inventario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalles</title>
+</head>
+<body>
+    <div>
+        <h4>Inventario</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Precio)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Precio)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Fecha_Entrada)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Fecha_Entrada)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Lote)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Lote)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Modelo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Stock)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Stock)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Merma)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Merma)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Proveedor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Proveedor)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Inventario_Real)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Inventario_Real)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Actualizar", new { id = Model.Id }) |
+        @Html.ActionLink("Regresar al catalogo", "Catalogo")
+    </p>
+</body>
+</html>
