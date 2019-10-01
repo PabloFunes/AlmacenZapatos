@@ -11,48 +11,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Eliminar.css" rel="stylesheet" />
-    <title>Eliminar</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>Eliminar Lote</title>
 </head>
 <body>
     @Html.Partial("_Header")
     <div style="text-align:center">
         <h1>¿Estas seguro de eliminarlo?</h1>
-    </div>
-
-    <table class="table table-bordered">
-        <tr style="grid-row-align:center ">
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th style="grid-column-align:center">
-                @Html.DisplayNameFor(model => model.Descripcion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Precio)
-            </th>
-            <th>
-                @Html.DisplayName("Fecha De Entrada")
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lote)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Modelo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Stock)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Merma)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Proveedor)
-            </th>
-            <th>
-                @Html.DisplayName("Inventario Real")
-            </th>
-        </tr>
+        <hr />
+  
+        <table class="table table-bordered">
+            <tr style="grid-row-align:center ">
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th style="grid-column-align:center">
+                    @Html.DisplayNameFor(model => model.Descripcion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Precio)
+                </th>
+                <th>
+                    @Html.DisplayName("Fecha De Entrada")
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lote)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Modelo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stock)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Merma)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Proveedor)
+                </th>
+                <th>
+                    @Html.DisplayName("Inventario Real")
+                </th>
+            </tr>
 
             <tr class="text-center">
                 <td>
@@ -86,13 +86,17 @@
                     @Html.DisplayFor(model => model.Inventario_Real)
                 </td>
             </tr>
-    </table>
-    <div class="form-group">
-        <div class="col-md-offset-5 col-md-4">
-            <input type="submit" value="Guardar" class="btn btn-success" />
-            <a class="btn btn-danger" href="~/Almacen/Catalogo">Cancelar</a>
-        </div>
+        </table>
+
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+                <a class="btn btn-warning" href="~/Almacen/Catalogo">Cancelar</a>
+            </div>
+        }
     </div>
-    </div>  
 </body>
 </html>
+

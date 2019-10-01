@@ -1,13 +1,13 @@
 ﻿@model AlmacenZapatos.Inventario
 
 <div class="panel panel-default">
-    <div class="panel panel-heading">
-        <h2 class="panel-title">@Model.Nombre</h2>
+    <div class="panel panel-heading text-center">
+        <h1 class="panel-title" style="align-content:center"> <strong>@Model.Nombre</strong> </h1>
     </div>
     <div class="panel-body">
         <table class="table table-bordered">
             <tr>
-                <td>
+                <td style="align-content:center">
                     @Html.DisplayNameFor(model => model.Id)
                 </td>
                 
@@ -74,8 +74,10 @@
                 </td>
             </tr>
         </table>
-            @Html.ActionLink("Editar", "Actualizar", new { id = Model.Id }) |
-            @Html.ActionLink("Eliminar", "Eliminar", new { id = Model.Id })             
+        <div class="col-md-offset-5 col-md-4 col-sm-offset-5 col-sm-4 col-lg-offset-5 col-lg-4"                                                                                                                                                                         >
+            <a class="btn btn-success" @Html.ActionLink("Editar", "Actualizar", new { id = Model.Id }) </a>
+            <a class="btn btn-danger" @Html.ActionLink("Eliminar", "Eliminar", new { id = Model.Id }) </a>
+        </div>      
     </div>
 </div>
 
