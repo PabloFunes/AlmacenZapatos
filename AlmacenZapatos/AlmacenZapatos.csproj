@@ -206,7 +206,6 @@
     <Content Include="Content\Eliminar.css" />
     <Content Include="Content\Index.css" />
     <Content Include="Content\NuevoZapato.css" />
-    <Content Include="Content\_Footer.css" />
     <Content Include="Content\_Header.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -286,7 +285,7 @@
     <Content Include="Views\Almacen\NuevoZapato.cshtml" />
     <Content Include="Views\Almacen\_Header.cshtml" />
     <Content Include="Views\Almacen\Eliminar.cshtml" />
-    <Content Include="Views\Almacen\_Footer.cshtml" />
+    <Content Include="Views\Almacen\Soporte.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
