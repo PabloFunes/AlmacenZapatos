@@ -205,6 +205,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Eliminar.css" />
     <Content Include="Content\Index.css" />
+    <Content Include="Content\NuevoZapato.css" />
     <Content Include="Content\_Header.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
